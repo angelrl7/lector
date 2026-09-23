@@ -7,4 +7,6 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 export default defineConfig({
   plugins: [react(), basicSsl()],
   server: { host: true },
+  // NEXT_PUBLIC_ es el prefijo que usa la integración de Supabase en Vercel
+  envPrefix: ['VITE_', 'NEXT_PUBLIC_'],
 });
